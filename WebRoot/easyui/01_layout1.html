@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>02_base.html</title>
+		<link rel="stylesheet" href="../themes/icon.css" type="text/css"></link>
+		<link rel="stylesheet" href="../themes/default/easyui.css" type="text/css"></link>
+		<!-- 引入easyui的js文件，先引入jquery，再引入easyui -->  
+		<script type="text/javascript" src="../js/jquery-1.8.2.js"></script>
+		<script type="text/javascript" src="../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../js/jquery.easyui.min.js"></script>
+		<script type="text/javascript" src="../js/easyui-lang-zh_CN.js"></script>
+	</head>
+	<body>
+	  <div id="layoutID" style="width: 700px; height: 500px;border: 1px solid red;" class="easyui-layout" data-options="fit:true">
+	  	<!-- 区域面板--北边-->
+	  	<div data-options="region:'north',title:'北边',split:true" style="height:200px;"></div> 
+	  	<!-- 区域面板--南边-->
+        <div data-options="region:'south',title:'South Title',split:true" style="height:200px;"></div>  
+        <!-- 区域面板--东边-->
+        <div data-options="region:'east',iconCls:'icon-reload',title:'East',split:true" style="width:200px;"></div>  
+        <!-- 区域面板--西边-->
+        <div data-options="region:'west',title:'West',split:true" style="width:200px;"></div>   
+        <!-- 区域面板--中间-->
+        <div data-options="region:'center',title:'中间',href:'../images/mm.html'" style="padding:5px;background:#eee;"></div>   
+	  </div>
+      <script type="text/javascript">
+      	
+      	$(function(){
+      		$("#layoutID").layout('collapse','north');
+      		window.setTimeout(function(){
+      			$("#layoutID").layout('collapse','south');
+      			$("#layoutID").layout('expand','north');
+      			window.setTimeout(function(){
+      				$('#layoutID').layout('expand','south');
+      			},3000);
+      		},3000);
+      		
+      	});
+      </script>
+	</body>
+</html>

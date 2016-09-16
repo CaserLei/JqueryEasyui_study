@@ -1,0 +1,41 @@
+（06）谈谈索引库优化有哪几个方面
+      >>文件数量问题
+      >>文件大数问题
+      >>写入索引库速度问题
+
+（07）分词器有什么作用
+      用户不可能完全记住所有文章的内容，可能只能记住该文章中的某些关键字，
+      那么做为搜索功能的程序来讲，就需要用关键字去最大限度搜索到用户需要的
+      内部，分词器就在中间起了一个桥梁作用
+
+（08）document.get("content")和document.getField("content")有什么区别？
+      get()获取document对象中content字段的值，返回值是String类型
+      getField("content")获取document对象中content字段，返回值是Field类型
+      
+（09）在默认情况下，搜索结果是如何排序的？如果有二个结果相同，又是如何排序的？
+      在默认情况下，按得分度的高低排序，如果相同得份，按你插入索引库的先后排序
+
+（10）QueryParser queryParser = 
+		  new QueryParser(LuceneUtil.getVersion(),"content",LuceneUtil.getAnalyzer());
+      QueryParser queryParser = 
+		  new MultiFieldQueryParser(LuceneUtil.getVersion(),new String[]					    {"content","title"},LuceneUtil.getAnalyzer());
+      有什么区别？
+      第一个API表示单字段搜索
+      第二个API表示多字段搜索
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

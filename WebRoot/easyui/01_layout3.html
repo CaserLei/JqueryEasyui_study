@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>03_base.html</title>
+		<link rel="stylesheet" href="../themes/icon.css" type="text/css"></link>
+		<link rel="stylesheet" href="../themes/default/easyui.css" type="text/css"></link>
+		<!-- 引入easyui的js文件，先引入jquery，再引入easyui -->  
+		<script type="text/javascript" src="../js/jquery-1.8.2.js"></script>
+		<script type="text/javascript" src="../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../js/jquery.easyui.min.js"></script>
+		<script type="text/javascript" src="../js/easyui-lang-zh_CN.js"></script>
+	</head>
+	<body >
+	  	<div id="layoutID" class="easyui-layout" data-options="fit:true">
+	  		<!--
+              	作者：2306892007@qq.com
+              	时间：2016-09-15
+              	描述：北边
+              -->
+	  		<div data-options="region:'north'" style="height:100px" style="border: solid red;"></div>  
+	  		<!--
+              	作者：2306892007@qq.com
+              	时间：2016-09-15
+              	描述：中间
+              -->
+            <div data-options="region:'center'" style="border: solid blue;">
+            	
+            	<div class="easyui-layout" data-options="fit:true">
+            		<!--
+                	作者：2306892007@qq.com
+                	时间：2016-09-15
+                	描述：西边
+	                -->
+	                <div data-options="region:'west',border:false" style="width: 100px;"></div>
+	                <!--
+	                	作者：2306892007@qq.com
+	                	时间：2016-09-15
+	                	描述：
+	                -->
+	                <div data-options="region:'center'"></div>
+	            </div>
+            </div>
+	  	</div>
+	</body>
+</html>

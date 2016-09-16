@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>00_base.html</title>
+		<link rel="stylesheet" href="../themes/icon.css" type="text/css"></link>
+		<link rel="stylesheet" href="../themes/default/easyui.css" type="text/css"></link>
+		<!-- 引入easyui的js文件，先引入jquery，再引入easyui -->  
+		<script type="text/javascript" src="../js/jquery-1.8.2.js"></script>
+		<script type="text/javascript" src="../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../js/jquery.easyui.min.js"></script>
+		<script type="text/javascript" src="../js/easyui-lang-zh_CN.js"></script>
+	</head>
+	<body>
+	  <div id="p" class="easyui-panel" style="width: 500px;height: 300px;padding: 15px;" title="我的面板" data-options="iconCls:'icon-save',iconCls:'icon-add',collapsible:true">
+	  	这是我的第一个EasyUI程序。
+	  	
+	  </div>
+	  
+	  <div id="pp" style="padding:10px;">    
+	    <p>panel content.</p>    
+	    <p>panel content.</p>    
+      </div>    
+      <script type="text/javascript">
+      	$('#pp').panel({    
+		  width:800,    
+		  height:150,    
+		  title: 'My Panel',    
+		  tools: [{    
+		    iconCls:'icon-add',    
+		    handler:function(){alert('new')}    
+		  },{    
+		    iconCls:'icon-save',    
+		    handler:function(){alert('save')}    
+		  }]    
+		});   
+
+      </script>
+
+	</body>
+</html>

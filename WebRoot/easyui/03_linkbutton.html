@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>03_base.html</title>
+		<link rel="stylesheet" href="../themes/icon.css" type="text/css"></link>
+		<link rel="stylesheet" href="../themes/default/easyui.css" type="text/css"></link>
+		<!-- 引入easyui的js文件，先引入jquery，再引入easyui -->  
+		<script type="text/javascript" src="../js/jquery-1.8.2.js"></script>
+		<script type="text/javascript" src="../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../js/jquery.easyui.min.js"></script>
+		<script type="text/javascript" src="../js/easyui-lang-zh_CN.js"></script>
+	</head>
+	<body>
+	  	<a id="btn" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-add'">增加部门</a><p/>
+	  	<a id="btn" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-search'">查询部门</a><p/>  
+	  	<a id="btn" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-edit'">修改部门</a> <p/> 
+	  	<a id="btn" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-remove'">删除部门</a><p/>  
+        <script type="text/javascript">
+        	$("a").click(function(){
+        		//获取你所单击的按钮的标题
+        		var title=$(this).text();
+        		//去空格
+        		title=$.trim(title);
+        		alert(title);
+        	});
+        </script>
+	</body>
+</html>

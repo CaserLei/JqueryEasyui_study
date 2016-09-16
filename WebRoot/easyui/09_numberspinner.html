@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>06_validatebox.html</title>
+		<link rel="stylesheet" href="../themes/icon.css" type="text/css"></link>
+		<link rel="stylesheet" href="../themes/default/easyui.css" type="text/css"></link>
+		<!-- 引入easyui的js文件，先引入jquery，再引入easyui -->  
+		<script type="text/javascript" src="../js/jquery-1.8.2.js"></script>
+		<script type="text/javascript" src="../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../js/jquery.easyui.min.js"></script>
+		<script type="text/javascript" src="../js/easyui-lang-zh_CN.js"></script>
+	</head>
+	<body>
+		<div style="margin-left:300px;">
+			身高：<span id="tip"></span>
+			<div id="ss" style=" width:600px;height:400px"></div> 
+		</div>
+	    <script type="text/javascript">
+	       $('#ss').slider({    
+			    mode: 'v',    
+			    min:140,
+			    max:190,
+			    rule:[140,'|',150,'|',160,'|',170,'|',180,'|',190]
+			});  
+	    </script>
+	    
+	    <script type="text/javascript">
+	    	$("#ss").slider({
+	    		onChange:function(newValue){
+	    			if(newValue ==150){
+	    				$("#tip").text("合格").css("color","blue");
+	    			}else if(newValue ==160){
+	    				$("#tip").text("良好").css("color","green");
+	    			}else if(newValue==170){
+	    				$("#tip").text("优秀").css("color","red");
+	    			}else if(newValue==180){
+	    				$("#tip").text("真高").css("color","yellow");
+	    			}
+	    		}
+	    	});
+	    	
+	    </script>
+
+		
+	</body>
+</html>

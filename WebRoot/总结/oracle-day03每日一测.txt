@@ -1,0 +1,54 @@
+（01）删除到回收站的表，通过什么技术可以还原? 
+      闪回
+
+（02）create table emp as select * from xxx_emp where 1<>1是什么意思？
+      依据xxx_emp表创建emp表结构，但无记录	
+     
+（03）事务是针对DML/DDL/DCL哪种语句?
+      针对DML	
+	
+（04）drop table/truncate table/delete from 的区别？
+      drop table 是DDL/不可回滚/不可带where/表内容和表结构均没
+      truncate table 是DDL/不可回滚/不可带where/表内容没表结构在
+      delete from 是DML/可回滚/可带where/表内容没表结构在/是速度最慢的一个 
+
+（05）oracle默认是哪种隔离级别？MySQL默认是哪种隔离级别？
+      oracle-read committed
+      mysql-repeatable read	
+ 
+（06）grant select any table to scott和revoke select any table from scott是什么意思？ 
+      第一：授给scott用户查询任何表的权限
+      第二：撤销scott用户查询任何表的权限
+	  
+（07）on delete cascade和on delete set null是什么意思？
+      第一：删除主表记录时，同时也删除从表中相关联的记录
+      第二：删除主表记录时，不同时也删除从表中相关联的记录，只是将从表的外健字段设置为NULL	
+
+（08）你觉得什么情况下要用视图？ 
+      》让不同的用户看到不同的数据
+      》	简化复杂的查询SQL的书写，但不提高查询速度
+
+（09）视图能提高查询效率（即让查询速度更快）吗？
+      不能      	
+
+（10）只读视图有什么好处？
+      不能对该视图进行非SELECT操作，从而接间保护了基表     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

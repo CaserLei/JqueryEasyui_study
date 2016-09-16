@@ -1,0 +1,44 @@
+（01）一个完整的PLSQL有哪几部分组成？  
+      [declare]/begin/[exception]/end;/
+
+（02）pename emp.ename%type和emp_rec emp%rowtype是什么意思？
+      pename变量与emp表的ename字段相同类型
+      emp_rec变量与emp表的结构类型相同，通过变量名.字段名去访问
+      
+（03）select to_char(sysdate,'day') into pday from dual是什么意思？
+      获取当前星期几设置到变量pday中
+
+（04）exit when cemp%notfound是什么意思？
+      当cemp游标找不到真实记录时，就退出
+  
+（05）什么情况下，要使用cursor？
+      当你需要对表中多条记录从上向下一一迭代时，可以用cursor技术
+   
+（06）NO_EMP_FOUND exception是什么意思？
+      定义例外
+
+（07）什么是存储过程和存储函数？
+      事先用oracle语言写的一段具有业务功能的程序段，长期存于oracle服务器中，
+      供oracle客户端或外界应用程序调用，并返回相应的结果      
+
+（08）存储过程和存储函数比较适合用在什么地方？
+      过程适合于无返回值或有超过1个以上返回值的应用
+      有且只有一个返回值时适合于函数 	      
+
+（09）in和out是什么意思？默认是哪个？
+      in接收实参
+      out输出返回值
+      默认是in
+
+（10）触发器是针对insert/delete/update/select哪些操作？
+      触发器insert/update/delete 
+					
+
+
+		
+
+
+
+
+
+
