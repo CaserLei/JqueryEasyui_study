@@ -23,7 +23,16 @@
 			        {field:'ename',title:'姓名',width:100},    
 			        {field:'job',title:'工作',width:100,align:'right'},
 			        {field:'mgr',title:'上级编号',width:100},    
-			        {field:'hiredate',title:'入职时间',width:100},    
+			        {field:'hiredate',title:'入职时间',width:100,
+			        	formatter:function(value){
+			        		var year="19"+value.year;
+			        		var month=value.month+1;
+			        		var date=value.date;
+			        		return year+"-"+month+"-"+date;
+			          }
+			        
+			        },    
+			        
 			        {field:'sal',title:'月薪',width:100,align:'right'},  
 			        {field:'comm',title:'佣金',width:100},    
 			        {field:'deptno',title:'部门编号',width:100}  
